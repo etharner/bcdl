@@ -1,5 +1,6 @@
 # bcdl
 Bandcamp downloader.
+Downloads random album.
 
 - Install using install.bat
 - Run using bcdl.bat
