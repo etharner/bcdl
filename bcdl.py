@@ -22,8 +22,10 @@ def my_hook(d):
 	f_name = file_tuple[-1].split('.')[0]
 	if d['status'] == 'finished':
 		print("Done downloading {}".format(f_name))
+		sys.stdout.flush()	
 	if d['status'] == 'downloading':
 		print("Track:", f_name, d['_percent_str'], d['_eta_str'])
+		sys.stdout.flush()	
 
 def bcdl():
 	req = requests.request('GET', 'https://random-album.com/')
@@ -35,6 +37,7 @@ def bcdl():
 	album = r.search(url).group(2)
 
 	print('Catching Artist: {0}, Album: {1}'.format(band, album))
+	sys.stdout.flush()	
 
 	ydl_opts = {
 	    'format': 'mp3',
@@ -50,6 +53,7 @@ def bcdl():
 	
 	with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 		print('Downloading ...')
+		sys.stdout.flush()	
 		ydl.download([url])
 
 	print('Done!')
@@ -60,6 +64,7 @@ def retry():
 			output = bcdl()	
 		except SSHException:
 			print('Error, trying another ...')
+			sys.stdout.flush()	
 		else:
 			return output
 
