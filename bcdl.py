@@ -4,6 +4,7 @@ from lxml.html import parse
 import requests
 import youtube_dl
 import re
+import sys
 
 class MyLogger(object):
     def debug(self, msg):
@@ -32,7 +33,7 @@ def bcdl():
 		print('Catching Artist: {0}, Album: {1}'.format(band, album))
 
 		ydl_opts = {
-		    'format': 'best',
+		    'format': 'mp3',
 		    'postprocessors': [{
 		        'key': 'FFmpegExtractAudio',
 		        'preferredcodec': 'mp3',
@@ -47,6 +48,7 @@ def bcdl():
 			print('Downloading ...')
 			ydl.download([url])
 		print('Done!')
+		return
 
 	except KeyboardInterrupt:
 	   	print('Interrupted!')
@@ -55,4 +57,6 @@ def bcdl():
 		print('Error, trying another ...')
 		bcdl()	
 
-bcdl()		  
+count = int(sys.argv[1])
+for i in range(count):
+	bcdl()		  
