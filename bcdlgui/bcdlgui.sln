@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bcdlgui", "bcdlgui.csproj", "{F420D8B9-12E5-45D7-A144-D94F0DBA8F58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F420D8B9-12E5-45D7-A144-D94F0DBA8F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F420D8B9-12E5-45D7-A144-D94F0DBA8F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F420D8B9-12E5-45D7-A144-D94F0DBA8F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F420D8B9-12E5-45D7-A144-D94F0DBA8F58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C74BF07B-F160-46F9-A129-935A31A4235B}
+	EndGlobalSection
+EndGlobal
