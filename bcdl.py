@@ -62,7 +62,7 @@ def retry():
 	while True:
 		try:
 			output = bcdl()	
-		except SSHException:
+		except:
 			print('Error, trying another ...')
 			sys.stdout.flush()	
 		else:
